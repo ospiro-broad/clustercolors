@@ -79,7 +79,7 @@ class PhylogicColorList():
         if as_hex:
             self.color_list = [self.rgb2hex(c) for c in self.color_list]
         if as_float:
-            self.color_list = [map(float,c) for c in self.color_list]
+            self.color_list = [list(map(lambda x: x/256.,c)) for c in self.color_list]
             
     def __len__(self):
         return len(self.color_list)
