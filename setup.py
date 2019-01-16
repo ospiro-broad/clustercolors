@@ -1,5 +1,5 @@
 from distutils.core import setup
-setup(name='foo',
+setup(name='clustercolors',
             version='1.0',
-            py_modules=['foo'],
+            py_modules=['clustercolors'],
             )
