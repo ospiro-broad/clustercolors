@@ -1,6 +1,6 @@
 class PhylogicColorList():
     def __init__(self,as_hex=False,as_float=False):
-        self.color_list = [[166, 17, 129],
+        self.color_list = [[0.,0.,0],
                       [39, 140, 24], # 1
                       [103, 200, 243], # 2
                       [248, 139, 16], # 3
