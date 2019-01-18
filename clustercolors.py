@@ -56,26 +56,7 @@ class PhylogicColorList():
                                           [120,127,113],
                                           [142,148,166],
                                           [153,167,156],
-                                          [162,139,145],
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.], 
-                                          [0.,0.,0.]]
+                                          [162,139,145]]
         if as_hex:
             self.color_list = [self.rgb2hex(c) for c in self.color_list]
         if as_float:
@@ -86,6 +67,8 @@ class PhylogicColorList():
     def __iter__(self):
         return self.color_list
     def __getitem__(self,i):
+        if i==0:
+            raise ValueError("No cluster 0 please")
         return self.color_list[i]
     def validrgb(self,triple):
         if len(triple) != 3:
