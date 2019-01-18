@@ -71,11 +71,11 @@ class PhylogicColorList():
             raise ValueError("No cluster 0 please")
         elif i>=len(self.color_list):
             if self.as_hex:
-                return rgb2hex([162,139,145])
+                return rgb2hex([196, 194, 194])
             elif self.as_float:
-                return [162./256,139./256,145./256]
+                return [196./256,194./256,194./256]
             else:
-                return [162,139,145] 
+                return [196, 194, 194]
         return self.color_list[i]
     def validrgb(self,triple):
         if len(triple) != 3:
