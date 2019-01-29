@@ -73,7 +73,7 @@ class PhylogicColorList():
             if self.as_hex:
                 return rgb2hex([196, 194, 194])
             elif self.as_float:
-                return [196./255,194./256,194./256]
+                return [196./255,194./255,194./255]
             else:
                 return [196, 194, 194]
         return self.color_list[i]
