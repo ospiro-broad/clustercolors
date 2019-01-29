@@ -46,7 +46,7 @@ class PhylogicColorList():
                       [104, 93, 48],
                       [49, 67, 82],
                       [71, 95, 65],
-                      [127, 85, 44], #even more additional colors, gray 
+                      [127, 85, 44], #even more additional colors, gray
                                           [88,79,92],
                                           [220,212,194],
                                           [35,34,36],
@@ -60,8 +60,8 @@ class PhylogicColorList():
         if as_hex:
             self.color_list = [self.rgb2hex(c) for c in self.color_list]
         if as_float:
-            self.color_list = [list(map(lambda x: x/256.,c)) for c in self.color_list]
-            
+            self.color_list = [list(map(lambda x: x/255.,c)) for c in self.color_list]
+
     def __len__(self):
         return len(self.color_list)
     def __iter__(self):
