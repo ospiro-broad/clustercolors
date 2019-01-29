@@ -84,7 +84,7 @@ class PhylogicColorList():
             if not isinstance(val,int):
                 if val != 0.:
                     return False
-            elif val not in list(range(255)):
+            elif val not in list(range(256)):
                 return False
         return True
     def rgb2hex(self,rgb_triple):
