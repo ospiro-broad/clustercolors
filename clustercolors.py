@@ -1,5 +1,7 @@
 class PhylogicColorList():
     def __init__(self,as_hex=False,as_float=False):
+        self.as_hex = as_hex
+        self.as_float = as_float
         self.color_list = [[0,0,0],
                       [39, 140, 24], # 1
                       [103, 200, 243], # 2
@@ -65,13 +67,13 @@ class PhylogicColorList():
     def __len__(self):
         return len(self.color_list)
     def __iter__(self):
-        return self.color_list
+        return iter(self.color_list)
     def __getitem__(self,i):
         if i==0:
             raise ValueError("No cluster 0 please")
         elif i>=len(self.color_list):
             if self.as_hex:
-                return rgb2hex([196, 194, 194])
+                return self.rgb2hex([196, 194, 194])
             elif self.as_float:
                 return [196./255,194./255,194./255]
             else:
